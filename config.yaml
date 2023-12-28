@@ -1,0 +1,16 @@
+hosts:
+  - name: lego_sales_and_deals
+    url: "https://www.lego.com/en-ca/categories/sales-and-deals"
+  - name: last-chance-to-buy
+    url: "https://www.lego.com/en-ca/categories/last-chance-to-buy"
+collect:
+  - 10328
+  - 71426
+  - 71395
+  - 21342
+  - 21340
+  - 21333
+  - 40649
+  - 71411
+  - 40516
+  - 40623
