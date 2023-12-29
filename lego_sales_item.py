@@ -82,7 +82,7 @@ def main():
 
     # Get the product number in YAML configuration
     target_keys = config.get('collect', [])
-    # print(type(target_keys))
+
     if not target_keys:
         raise ValueError('No target keys found in the configuration file.')
     
@@ -110,15 +110,15 @@ def main():
                 print(f'==========Extracting page {i+1} products==========')
                 
                 url = f'{host_url}?page={i+1}'
-            #  print(url)
-                res = get_html_data(url)
-                soup = bs4.BeautifulSoup(res, "html.parser") #用bs4模块的beautifulsoup功能将相应的结果解析出来
 
-                products = soup.find_all('article', {'data-test' : 'product-leaf'}) #找到所需产品信息页面
+                res = get_html_data(url)
+                soup = bs4.BeautifulSoup(res, "html.parser") 
+
+                products = soup.find_all('article', {'data-test' : 'product-leaf'}) 
 
                 for product in products:
                     product_info = extract_product_info(product)
-                    # print(type(product_info['key']))
+
                     # product information is written into CSV file
                     csvwriter.writerow(product_info)
                     
