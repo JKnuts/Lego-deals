@@ -1,9 +1,3 @@
-Lego-deals
-
-A small program for discount products on the Lego official website.
-
----
-
 ### User Guide
 
 **Introduction:**
